@@ -11,8 +11,20 @@ class AsignaturaSeeder extends Seeder
     public function run(): void
     {
         Asignatura::create([
-            'nombre'=>'anatomia',
-            'detalle'=>'primer año de anatomia - Dr. Choque',
+            'nombre'=>'ANATOMIA',
+            'detalle'=>'PRIMER PARCIAL PRIMER AÑO  - DR. Choque',
+            'patron'=>'url del patron',
+        ]);
+
+        Asignatura::create([
+            'nombre'=>'FISIOLOGIA',
+            'detalle'=>'PRIMER PARCIAL SEGUNDO AÑO  - DR. PEREZ',
+            'patron'=>'url del patron',
+        ]);
+
+        Asignatura::create([
+            'nombre'=>'BIOLOGIA',
+            'detalle'=>'PRIMER PARCIAL TERCER AÑO  - DR. LOZA',
             'patron'=>'url del patron',
         ]);
     }

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Persona extends Model
 {
@@ -18,4 +19,10 @@ class Persona extends Model
         'nota',
         'imagen',
     ];
+    public $timestamps = false;
+    
+    public function post(): BelongsTo
+    {
+        return $this->belongsTo(Asignatura::class,'asignatura_id');
+    }
 }

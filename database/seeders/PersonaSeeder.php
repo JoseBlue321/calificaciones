@@ -12,11 +12,61 @@ class PersonaSeeder extends Seeder
     {
         Persona::create([
             'asignatura_id'=>1,
-            'carnet'=>'12345',
-            'nombre'=>'jose',
-            'paterno'=>'apaza',
-            'materno'=>'saavedra',
+            'carnet'=>'001',
+            'nombre'=>'JOSE',
+            'paterno'=>'APAZA',
+            'materno'=>'SAAVEDRA',
             'nota'=>20,
+            'imagen'=>'url de la img',
+        ]);
+
+        Persona::create([
+            'asignatura_id'=>1,
+            'carnet'=>'002',
+            'nombre'=>'ANA',
+            'paterno'=>'MAMANI',
+            'materno'=>'PEREZ',
+            'nota'=>30,
+            'imagen'=>'url de la img',
+        ]);
+
+        Persona::create([
+            'asignatura_id'=>1,
+            'carnet'=>'003',
+            'nombre'=>'CARLOR',
+            'paterno'=>'CONDORI',
+            'materno'=>'PEREZ',
+            'nota'=>40,
+            'imagen'=>'url de la img',
+        ]);
+
+        Persona::create([
+            'asignatura_id'=>2,
+            'carnet'=>'004',
+            'nombre'=>'MARIA',
+            'paterno'=>'GALARZA',
+            'materno'=>'PEREZ',
+            'nota'=>20,
+            'imagen'=>'url de la img',
+        ]);
+
+        Persona::create([
+            'asignatura_id'=>2,
+            'carnet'=>'005',
+            'nombre'=>'MARIA',
+            'paterno'=>'DELGADO',
+            'materno'=>'ANDRADE',
+            'nota'=>26,
+            'imagen'=>'url de la img',
+        ]);
+
+        Persona::create([
+            'asignatura_id'=>3,
+            'carnet'=>'006',
+            'nombre'=>'MARINA',
+            'paterno'=>'LOZA',
+            'materno'=>'CONDE',
+            'nota'=>26,
             'imagen'=>'url de la img',
         ]);
         

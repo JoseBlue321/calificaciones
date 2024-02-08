@@ -10,9 +10,8 @@ class AsignaturaController extends Controller
 {
     public function index()
     {
-        $personas = Persona::all();
-        return $personas;
-        //return view('home',['asignaturas'=>$asignaturas]);
+        $asignaturas = Asignatura::all();
+        return view('home',['asignaturas'=>$asignaturas]);
     }
 
     public function create()
@@ -27,7 +26,12 @@ class AsignaturaController extends Controller
 
     public function show(string $id)
     {
-        //
+        $asignatura = Asignatura::findOrFail($id);
+        $personas = $asignatura->personas()->get();
+        return view('asignatura',[
+            'asignatura'=>$asignatura,
+            'personas'=>$personas,
+        ]);
     }
 
     public function edit(string $id)

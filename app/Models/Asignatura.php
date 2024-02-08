@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Asignatura extends Model
 {
@@ -14,4 +15,10 @@ class Asignatura extends Model
         'detalle',
         'patron',
     ];
+    public $timestamps = false;
+
+    public function personas(): HasMany
+    {
+        return $this->hasMany(Persona::class,'asignatura_id');
+    }
 }
